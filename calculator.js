@@ -139,10 +139,15 @@ window.addEventListener('load', function(e){
 
     //Store Operand Into A Variable
     var operand = null;
+    //Create an Array of Operands to Track How Many
+    //Mathematical Operations have Taken Place
+    var operandArr = [];
     //Create an Array of Numbers
     var numbers = [];
     //Create a Result Variable
     var result = null;
+    //Create a Variable to Store Input
+    var inputs = [];
 
     var add = function(numbersArr) {
       var num1 = numbersArr.shift();
@@ -171,13 +176,17 @@ window.addEventListener('load', function(e){
     td1.addEventListener('click', function(e) {
       e.preventDefault();
       console.log(td1.textContent);
+      inputs.push(td1.textContent);
       th.textContent = null;
+      numbers = [];
     });
     //Divide
     td4.addEventListener('click', function(e) {
       e.preventDefault();
       console.log(td4.textContent);
+      inputs.push(td4.textContent);
       operand = td4.textContent;
+      operandArr.push(operand);
       numbers.push(parseFloat(th.textContent));
       th.textContent = null;
       if (numbers.length > 1) {
@@ -191,25 +200,55 @@ window.addEventListener('load', function(e){
     td5.addEventListener('click', function(e) {
       e.preventDefault();
       console.log(td5.textContent);
-      th.textContent += td5.textContent;
+      inputs.push(td5.textContent);
+      if (operandArr.length <= 1) {
+        th.textContent += td5.textContent;
+      }
+      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+        th.textContent += td5.textContent;
+      }
+      else {
+        th.textContent = td5.textContent;
+      }
+
     });
     //8
     td6.addEventListener('click', function(e) {
       e.preventDefault();
       console.log(td6.textContent);
-      th.textContent += td6.textContent;
+      inputs.push(td6.textContent);
+      if (operandArr.length <= 1) {
+        th.textContent += td6.textContent;
+      }
+      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+        th.textContent += td6.textContent;
+      }
+      else {
+        th.textContent = td6.textContent;
+      }
     });
     //9
     td7.addEventListener('click', function(e) {
       e.preventDefault();
       console.log(td7.textContent);
-      th.textContent += td7.textContent;
+      inputs.push(td7.textContent);
+      if (operandArr.length <= 1) {
+        th.textContent += td7.textContent;
+      }
+      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+        th.textContent += td7.textContent;
+      }
+      else {
+        th.textContent = td7.textContent;
+      }
     });
     //Multiply
     td8.addEventListener('click', function(e) {
       e.preventDefault();
       console.log(td8.textContent);
+      inputs.push(td8.textContent);
       operand = td8.textContent;
+      operandArr.push(operand);
       numbers.push(parseFloat(th.textContent));
       th.textContent = null;
       if (numbers.length > 1) {
@@ -223,25 +262,54 @@ window.addEventListener('load', function(e){
     td9.addEventListener('click', function(e) {
       e.preventDefault();
       console.log(td9.textContent);
-      th.textContent += td9.textContent;
+      inputs.push(td9.textContent);
+      if (operandArr.length <= 1) {
+        th.textContent += td9.textContent;
+      }
+      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+        th.textContent += td9.textContent;
+      }
+      else {
+        th.textContent = td9.textContent;
+      }
     });
     //5
     td10.addEventListener('click', function(e) {
       e.preventDefault();
       console.log(td10.textContent);
-      th.textContent += td10.textContent;
+      inputs.push(td10.textContent);
+      if (operandArr.length <= 1) {
+        th.textContent += td10.textContent;
+      }
+      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+        th.textContent += td10.textContent;
+      }
+      else {
+        th.textContent = td10.textContent;
+      }
     });
     //6
     td11.addEventListener('click', function(e) {
       e.preventDefault();
       console.log(td11.textContent);
-      th.textContent += td11.textContent;
+      inputs.push(td11.textContent);
+      if (operandArr.length <= 1) {
+        th.textContent += td11.textContent;
+      }
+      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+        th.textContent += td11.textContent;
+      }
+      else {
+        th.textContent = td11.textContent;
+      }
     });
     //Subtract
     td12.addEventListener('click', function(e) {
       e.preventDefault();
       console.log(td12.textContent);
+      inputs.push(td12.textContent);
       operand = td12.textContent;
+      operandArr.push(operand);
       numbers.push(parseFloat(th.textContent));
       th.textContent = null;
       if (numbers.length > 1) {
@@ -255,25 +323,54 @@ window.addEventListener('load', function(e){
     td13.addEventListener('click', function(e) {
       e.preventDefault();
       console.log(td13.textContent);
-      th.textContent += td13.textContent;
+      inputs.push(td13.textContent);
+      if (operandArr.length <= 1) {
+        th.textContent += td13.textContent;
+      }
+      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+        th.textContent += td13.textContent;
+      }
+      else {
+        th.textContent = td13.textContent;
+      }
     });
     //2
     td14.addEventListener('click', function(e) {
       e.preventDefault();
       console.log(td14.textContent);
-      th.textContent += td14.textContent;
+      inputs.push(td14.textContent);
+      if (operandArr.length <= 1) {
+        th.textContent += td14.textContent;
+      }
+      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+        th.textContent += td14.textContent;
+      }
+      else {
+        th.textContent = td14.textContent;
+      }
     });
     //3
     td15.addEventListener('click', function(e) {
       e.preventDefault();
       console.log(td15.textContent);
-      th.textContent += td15.textContent;
+      inputs.push(td15.textContent);
+      if (operandArr.length <= 1) {
+        th.textContent += td15.textContent;
+      }
+      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+        th.textContent += td15.textContent;
+      }
+      else {
+        th.textContent = td15.textContent;
+      }
     });
     //Addition
     td16.addEventListener('click', function(e) {
       e.preventDefault();
       console.log(td16.textContent);
+      inputs.push(td16.textContent);
       operand = td16.textContent;
+      operandArr.push(operand);
       numbers.push(parseFloat(th.textContent));
       th.textContent = null;
       if (numbers.length > 1) {
@@ -287,12 +384,22 @@ window.addEventListener('load', function(e){
     td17.addEventListener('click', function(e) {
       e.preventDefault();
       console.log(td17.textContent);
-      th.textContent += td17.textContent;
+      inputs.push(td17.textContent);
+      if (operandArr.length <= 1) {
+        th.textContent += td17.textContent;
+      }
+      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+        th.textContent += td17.textContent;
+      }
+      else {
+        th.textContent = td17.textContent;
+      }
     });
     //Decimal
     td18.addEventListener('click', function(e) {
       e.preventDefault();
       console.log(td18.textContent);
+      inputs.push(td18.textContent);
       if (!th.textContent.includes('.')) {
         th.textContent += td18.textContent;
       }
@@ -302,6 +409,7 @@ window.addEventListener('load', function(e){
       e.preventDefault();
       console.log(td19.textContent);
       console.log(operand);
+      inputs.push(td19.textContent);
       numbers.push(parseFloat(th.textContent));
       if (operand === '+') {
         result = add(numbers);
@@ -319,5 +427,6 @@ window.addEventListener('load', function(e){
         result = multiply(numbers);
         th.textContent = result;
       }
+      numbers = [];
     });
 });
