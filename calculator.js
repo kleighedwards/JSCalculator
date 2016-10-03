@@ -174,6 +174,23 @@ window.addEventListener('load', function(e){
       var num2 = numbersArr.shift();
       return num1 * num2;
     };
+
+    var calculate = function(numbersArr, operand) {
+      var num1 = numbersArr.shift();
+      var num2 = numbersArr.shift();
+      if (operand === '+') {
+        return num1 + num2;
+      }
+      else if (operand === '-') {
+        return num1 - num2;
+      }
+      else if (operand === 'x') {
+        return num1 * num2;
+      }
+      else if (operand === '/') {
+        return num1 / num2;
+      }
+    }
     //Clear
     td1.addEventListener('click', function(e) {
       e.preventDefault();
@@ -195,7 +212,7 @@ window.addEventListener('load', function(e){
       console.log(numbers);
       th.textContent = null;
       if (numbers.length > 1) {
-        result = divide(numbers);
+        result = calculate(numbers, operand);
         th.textContent = result;
         numbers.push(result);
         log.push('resultTrue');
@@ -279,7 +296,7 @@ window.addEventListener('load', function(e){
       console.log(numbers);
       th.textContent = null;
       if (numbers.length > 1) {
-        result = multiply(numbers);
+        result = calculate(numbers, operand);
         th.textContent = result;
         numbers.push(result);
         log.push('resultTrue');
@@ -363,7 +380,7 @@ window.addEventListener('load', function(e){
       console.log(numbers);
       th.textContent = null;
       if (numbers.length > 1) {
-        result = subtract(numbers);
+        result = calculate(numbers, operand);
         th.textContent = result;
         numbers.push(result);
         log.push('resultTrue');
@@ -447,7 +464,7 @@ window.addEventListener('load', function(e){
       console.log(numbers);
       th.textContent = null;
       if (numbers.length > 1) {
-        result = add(numbers);
+        result = calculate(numbers, operand);
         th.textContent = result;
         numbers.push(result);
         log.push('resultTrue');
