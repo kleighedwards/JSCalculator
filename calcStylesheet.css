@@ -1,15 +1,21 @@
 table {
-  padding: 5px;
-  text-align: center;
-  border: 2px solid black;
-}
-th {
   padding: 15px;
   text-align: center;
   border: 2px solid black;
+  background-color: #9e9e9e;
+  font-family: sans-serif;
+}
+th {
+  padding: 30px;
+  text-align: center;
+  border: 2px solid black;
+  background-color: white;
+  font-size: 20px;
 }
 td {
   text-align: center;
   border: 2px solid black;
-  padding: 10px;
+  padding: 20px;
+  background-color: #beebf5;
+  font-size: 20px;
 }

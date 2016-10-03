@@ -16,7 +16,7 @@ window.addEventListener('load', function(e){
     var th = document.createElement('th');
     th.id = 'resultDisplay';
     th.colSpan = '4';
-    // th.textContent = '0';
+    th.textContent = '';
 
     trHead.appendChild(th);
     thead.appendChild(trHead);
@@ -177,7 +177,7 @@ window.addEventListener('load', function(e){
       e.preventDefault();
       console.log(td1.textContent);
       inputs.push(td1.textContent);
-      th.textContent = null;
+      th.textContent = '';
       numbers = [];
     });
     //Divide
@@ -188,6 +188,7 @@ window.addEventListener('load', function(e){
       operand = td4.textContent;
       operandArr.push(operand);
       numbers.push(parseFloat(th.textContent));
+      console.log(numbers);
       th.textContent = null;
       if (numbers.length > 1) {
         result = divide(numbers);
@@ -195,6 +196,7 @@ window.addEventListener('load', function(e){
         numbers.push(result);
       }
       return operand;
+      console.log(numbers);
     });
     //7
     td5.addEventListener('click', function(e) {
@@ -204,13 +206,17 @@ window.addEventListener('load', function(e){
       if (operandArr.length <= 1) {
         th.textContent += td5.textContent;
       }
-      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+      else if (operandArr.length > 1 && ((inputs[inputs.length - 2] === '0') ||
+      (inputs[inputs.length - 2] === '1') || (inputs[inputs.length - 2] === '2') ||
+      (inputs[inputs.length - 2] === '3') || (inputs[inputs.length - 2] === '4') ||
+      (inputs[inputs.length - 2] === '5') || (inputs[inputs.length - 2] === '6') ||
+      (inputs[inputs.length - 2] === '7') || (inputs[inputs.length - 2] === '8') ||
+      (inputs[inputs.length - 2] === '9') || (inputs[inputs.length - 2] === '.'))) {
         th.textContent += td5.textContent;
       }
       else {
         th.textContent = td5.textContent;
       }
-
     });
     //8
     td6.addEventListener('click', function(e) {
@@ -220,7 +226,12 @@ window.addEventListener('load', function(e){
       if (operandArr.length <= 1) {
         th.textContent += td6.textContent;
       }
-      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+      else if (operandArr.length > 1 && ((inputs[inputs.length - 2] === '0') ||
+      (inputs[inputs.length - 2] === '1') || (inputs[inputs.length - 2] === '2') ||
+      (inputs[inputs.length - 2] === '3') || (inputs[inputs.length - 2] === '4') ||
+      (inputs[inputs.length - 2] === '5') || (inputs[inputs.length - 2] === '6') ||
+      (inputs[inputs.length - 2] === '7') || (inputs[inputs.length - 2] === '8') ||
+      (inputs[inputs.length - 2] === '9') || (inputs[inputs.length - 2] === '.'))) {
         th.textContent += td6.textContent;
       }
       else {
@@ -235,7 +246,12 @@ window.addEventListener('load', function(e){
       if (operandArr.length <= 1) {
         th.textContent += td7.textContent;
       }
-      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+      else if (operandArr.length > 1 && ((inputs[inputs.length - 2] === '0') ||
+      (inputs[inputs.length - 2] === '1') || (inputs[inputs.length - 2] === '2') ||
+      (inputs[inputs.length - 2] === '3') || (inputs[inputs.length - 2] === '4') ||
+      (inputs[inputs.length - 2] === '5') || (inputs[inputs.length - 2] === '6') ||
+      (inputs[inputs.length - 2] === '7') || (inputs[inputs.length - 2] === '8') ||
+      (inputs[inputs.length - 2] === '9') || (inputs[inputs.length - 2] === '.'))) {
         th.textContent += td7.textContent;
       }
       else {
@@ -250,12 +266,14 @@ window.addEventListener('load', function(e){
       operand = td8.textContent;
       operandArr.push(operand);
       numbers.push(parseFloat(th.textContent));
+      console.log(numbers);
       th.textContent = null;
       if (numbers.length > 1) {
         result = multiply(numbers);
         th.textContent = result;
         numbers.push(result);
       }
+      console.log(numbers);
       return operand;
     });
     //4
@@ -266,7 +284,12 @@ window.addEventListener('load', function(e){
       if (operandArr.length <= 1) {
         th.textContent += td9.textContent;
       }
-      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+      else if (operandArr.length > 1 && ((inputs[inputs.length - 2] === '0') ||
+      (inputs[inputs.length - 2] === '1') || (inputs[inputs.length - 2] === '2') ||
+      (inputs[inputs.length - 2] === '3') || (inputs[inputs.length - 2] === '4') ||
+      (inputs[inputs.length - 2] === '5') || (inputs[inputs.length - 2] === '6') ||
+      (inputs[inputs.length - 2] === '7') || (inputs[inputs.length - 2] === '8') ||
+      (inputs[inputs.length - 2] === '9') || (inputs[inputs.length - 2] === '.'))) {
         th.textContent += td9.textContent;
       }
       else {
@@ -281,7 +304,12 @@ window.addEventListener('load', function(e){
       if (operandArr.length <= 1) {
         th.textContent += td10.textContent;
       }
-      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+      else if (operandArr.length > 1 && ((inputs[inputs.length - 2] === '0') ||
+      (inputs[inputs.length - 2] === '1') || (inputs[inputs.length - 2] === '2') ||
+      (inputs[inputs.length - 2] === '3') || (inputs[inputs.length - 2] === '4') ||
+      (inputs[inputs.length - 2] === '5') || (inputs[inputs.length - 2] === '6') ||
+      (inputs[inputs.length - 2] === '7') || (inputs[inputs.length - 2] === '8') ||
+      (inputs[inputs.length - 2] === '9') || (inputs[inputs.length - 2] === '.'))) {
         th.textContent += td10.textContent;
       }
       else {
@@ -296,7 +324,12 @@ window.addEventListener('load', function(e){
       if (operandArr.length <= 1) {
         th.textContent += td11.textContent;
       }
-      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+      else if (operandArr.length > 1 && ((inputs[inputs.length - 2] === '0') ||
+      (inputs[inputs.length - 2] === '1') || (inputs[inputs.length - 2] === '2') ||
+      (inputs[inputs.length - 2] === '3') || (inputs[inputs.length - 2] === '4') ||
+      (inputs[inputs.length - 2] === '5') || (inputs[inputs.length - 2] === '6') ||
+      (inputs[inputs.length - 2] === '7') || (inputs[inputs.length - 2] === '8') ||
+      (inputs[inputs.length - 2] === '9') || (inputs[inputs.length - 2] === '.'))) {
         th.textContent += td11.textContent;
       }
       else {
@@ -311,12 +344,14 @@ window.addEventListener('load', function(e){
       operand = td12.textContent;
       operandArr.push(operand);
       numbers.push(parseFloat(th.textContent));
+      console.log(numbers);
       th.textContent = null;
       if (numbers.length > 1) {
         result = subtract(numbers);
         th.textContent = result;
         numbers.push(result);
       }
+      console.log(numbers);
       return operand;
     });
     //1
@@ -327,7 +362,12 @@ window.addEventListener('load', function(e){
       if (operandArr.length <= 1) {
         th.textContent += td13.textContent;
       }
-      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+      else if (operandArr.length > 1 && ((inputs[inputs.length - 2] === '0') ||
+      (inputs[inputs.length - 2] === '1') || (inputs[inputs.length - 2] === '2') ||
+      (inputs[inputs.length - 2] === '3') || (inputs[inputs.length - 2] === '4') ||
+      (inputs[inputs.length - 2] === '5') || (inputs[inputs.length - 2] === '6') ||
+      (inputs[inputs.length - 2] === '7') || (inputs[inputs.length - 2] === '8') ||
+      (inputs[inputs.length - 2] === '9') || (inputs[inputs.length - 2] === '.'))) {
         th.textContent += td13.textContent;
       }
       else {
@@ -342,7 +382,12 @@ window.addEventListener('load', function(e){
       if (operandArr.length <= 1) {
         th.textContent += td14.textContent;
       }
-      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+      else if (operandArr.length > 1 && ((inputs[inputs.length - 2] === '0') ||
+      (inputs[inputs.length - 2] === '1') || (inputs[inputs.length - 2] === '2') ||
+      (inputs[inputs.length - 2] === '3') || (inputs[inputs.length - 2] === '4') ||
+      (inputs[inputs.length - 2] === '5') || (inputs[inputs.length - 2] === '6') ||
+      (inputs[inputs.length - 2] === '7') || (inputs[inputs.length - 2] === '8') ||
+      (inputs[inputs.length - 2] === '9') || (inputs[inputs.length - 2] === '.'))) {
         th.textContent += td14.textContent;
       }
       else {
@@ -357,7 +402,12 @@ window.addEventListener('load', function(e){
       if (operandArr.length <= 1) {
         th.textContent += td15.textContent;
       }
-      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+      else if (operandArr.length > 1 && ((inputs[inputs.length - 2] === '0') ||
+      (inputs[inputs.length - 2] === '1') || (inputs[inputs.length - 2] === '2') ||
+      (inputs[inputs.length - 2] === '3') || (inputs[inputs.length - 2] === '4') ||
+      (inputs[inputs.length - 2] === '5') || (inputs[inputs.length - 2] === '6') ||
+      (inputs[inputs.length - 2] === '7') || (inputs[inputs.length - 2] === '8') ||
+      (inputs[inputs.length - 2] === '9') || (inputs[inputs.length - 2] === '.'))) {
         th.textContent += td15.textContent;
       }
       else {
@@ -372,12 +422,15 @@ window.addEventListener('load', function(e){
       operand = td16.textContent;
       operandArr.push(operand);
       numbers.push(parseFloat(th.textContent));
+      console.log(numbers);
       th.textContent = null;
       if (numbers.length > 1) {
         result = add(numbers);
         th.textContent = result;
         numbers.push(result);
       }
+      console.log(numbers);
+
       return operand;
     });
     //0
@@ -388,7 +441,12 @@ window.addEventListener('load', function(e){
       if (operandArr.length <= 1) {
         th.textContent += td17.textContent;
       }
-      else if (operandArr.length > 1 && !isNaN(inputs[inputs.length - 2])) {
+      else if (operandArr.length > 1 && ((inputs[inputs.length - 2] === '0') ||
+      (inputs[inputs.length - 2] === '1') || (inputs[inputs.length - 2] === '2') ||
+      (inputs[inputs.length - 2] === '3') || (inputs[inputs.length - 2] === '4') ||
+      (inputs[inputs.length - 2] === '5') || (inputs[inputs.length - 2] === '6') ||
+      (inputs[inputs.length - 2] === '7') || (inputs[inputs.length - 2] === '8') ||
+      (inputs[inputs.length - 2] === '9') || (inputs[inputs.length - 2] === '.'))) {
         th.textContent += td17.textContent;
       }
       else {
