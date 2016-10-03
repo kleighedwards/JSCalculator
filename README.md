@@ -14,4 +14,6 @@
     - This functionality works so long as the user chains like operations. For instance, if the user adds and 
       subtracts within the same chain, the program will log the number currently in the display and perform the 
       operation on it prematurely. If the user were to chain like operations and select the Equals option before
-      switching their desired operand, the program will function as expected. 
+      switching their desired operand, the program will function as expected.
+        - For example: 2 + 2 + (Display 4) 2 = 6
+        -              6 - 2 - (Display 4) 2 = 2
