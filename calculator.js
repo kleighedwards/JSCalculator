@@ -148,8 +148,6 @@ window.addEventListener('load', function(e){
     var result = null;
     //Create a Variable to Store Input
     var inputs = [];
-    //Create an Array to Track Mathematical Progress
-    var log = [];
 
     var add = function(numbersArr) {
       var num1 = numbersArr.shift();
@@ -206,16 +204,13 @@ window.addEventListener('load', function(e){
       inputs.push(td4.textContent);
       operand = td4.textContent;
       operandArr.push(operand);
-      if (!(log[log.length - 1] === 'resultTrue')) {
       numbers.push(parseFloat(th.textContent));
-      }
       console.log(numbers);
       th.textContent = null;
       if (numbers.length > 1) {
-        result = calculate(numbers, operand);
+        result = calculate(numbers, operandArr[operandArr.length - 2]);
         th.textContent = result;
         numbers.push(result);
-        log.push('resultTrue');
       }
       return operand;
       console.log(numbers);
@@ -225,7 +220,6 @@ window.addEventListener('load', function(e){
       e.preventDefault();
       console.log(td5.textContent);
       inputs.push(td5.textContent);
-      log.push(td5.textContent);
       if (operandArr.length <= 1) {
         th.textContent += td5.textContent;
       }
@@ -246,7 +240,6 @@ window.addEventListener('load', function(e){
       e.preventDefault();
       console.log(td6.textContent);
       inputs.push(td6.textContent);
-      log.push(td6.textContent);
       if (operandArr.length <= 1) {
         th.textContent += td6.textContent;
       }
@@ -267,7 +260,6 @@ window.addEventListener('load', function(e){
       e.preventDefault();
       console.log(td7.textContent);
       inputs.push(td7.textContent);
-      log.push(td7.textContent);
       if (operandArr.length <= 1) {
         th.textContent += td7.textContent;
       }
@@ -290,16 +282,13 @@ window.addEventListener('load', function(e){
       inputs.push(td8.textContent);
       operand = td8.textContent;
       operandArr.push(operand);
-      if (!(log[log.length - 1] === 'resultTrue')) {
       numbers.push(parseFloat(th.textContent));
-      }
       console.log(numbers);
       th.textContent = null;
       if (numbers.length > 1) {
-        result = calculate(numbers, operand);
+        result = calculate(numbers, operandArr[operandArr.length - 2]);
         th.textContent = result;
         numbers.push(result);
-        log.push('resultTrue');
       }
       console.log(numbers);
       return operand;
@@ -309,7 +298,6 @@ window.addEventListener('load', function(e){
       e.preventDefault();
       console.log(td9.textContent);
       inputs.push(td9.textContent);
-      log.push(td9.textContent);
       if (operandArr.length <= 1) {
         th.textContent += td9.textContent;
       }
@@ -330,7 +318,6 @@ window.addEventListener('load', function(e){
       e.preventDefault();
       console.log(td10.textContent);
       inputs.push(td10.textContent);
-      log.push(td10.textContent);
       if (operandArr.length <= 1) {
         th.textContent += td10.textContent;
       }
@@ -351,7 +338,6 @@ window.addEventListener('load', function(e){
       e.preventDefault();
       console.log(td11.textContent);
       inputs.push(td11.textContent);
-      log.push(td11.textContent);
       if (operandArr.length <= 1) {
         th.textContent += td11.textContent;
       }
@@ -374,16 +360,13 @@ window.addEventListener('load', function(e){
       inputs.push(td12.textContent);
       operand = td12.textContent;
       operandArr.push(operand);
-      if (!(log[log.length - 1] === 'resultTrue')) {
       numbers.push(parseFloat(th.textContent));
-      }
       console.log(numbers);
       th.textContent = null;
       if (numbers.length > 1) {
-        result = calculate(numbers, operand);
+        result = calculate(numbers, operandArr[operandArr.length - 2]);
         th.textContent = result;
         numbers.push(result);
-        log.push('resultTrue');
       }
       console.log(numbers);
       return operand;
@@ -393,7 +376,6 @@ window.addEventListener('load', function(e){
       e.preventDefault();
       console.log(td13.textContent);
       inputs.push(td13.textContent);
-      log.push(td5.textContent);
       if (operandArr.length <= 1) {
         th.textContent += td13.textContent;
       }
@@ -414,7 +396,6 @@ window.addEventListener('load', function(e){
       e.preventDefault();
       console.log(td14.textContent);
       inputs.push(td14.textContent);
-      log.push(td14.textContent);
       if (operandArr.length <= 1) {
         th.textContent += td14.textContent;
       }
@@ -435,7 +416,6 @@ window.addEventListener('load', function(e){
       e.preventDefault();
       console.log(td15.textContent);
       inputs.push(td15.textContent);
-      log.push(td15.textContent);
       if (operandArr.length <= 1) {
         th.textContent += td15.textContent;
       }
@@ -458,16 +438,13 @@ window.addEventListener('load', function(e){
       inputs.push(td16.textContent);
       operand = td16.textContent;
       operandArr.push(operand);
-      if (!(log[log.length - 1] === 'resultTrue')) {
       numbers.push(parseFloat(th.textContent));
-      }
       console.log(numbers);
       th.textContent = null;
       if (numbers.length > 1) {
-        result = calculate(numbers, operand);
+        result = calculate(numbers, operandArr[operandArr.length - 2]);
         th.textContent = result;
         numbers.push(result);
-        log.push('resultTrue');
       }
       console.log(numbers);
 
@@ -478,7 +455,6 @@ window.addEventListener('load', function(e){
       e.preventDefault();
       console.log(td17.textContent);
       inputs.push(td17.textContent);
-      log.push(td17.textContent);
       if (operandArr.length <= 1) {
         th.textContent += td17.textContent;
       }
